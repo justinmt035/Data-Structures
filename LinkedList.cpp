@@ -1,8 +1,6 @@
 //============================================================================
 // Name        : LinkedList.cpp
 // Author      : Justin M Taylor
-// Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
 // Description : Lab 3-3 Lists and Searching
 //============================================================================
 
@@ -79,7 +77,6 @@ public:
  * Default constructor
  */
 LinkedList::LinkedList() {
-    // FIXME (1): Initialize housekeeping variables
     //set head and tail equal to null
     Node* head = nullptr;
     Node* tail = nullptr;
@@ -105,7 +102,6 @@ LinkedList::~LinkedList() {
  * Append a new bid to the end of the list
  */
 void LinkedList::Append(Bid bid) {
-    // FIXME (2): Implement append logic
     //Create new node
     Node* new_bid_node = new Node(bid);
     //if there is nothing at the head...
@@ -129,7 +125,6 @@ void LinkedList::Append(Bid bid) {
  * Prepend a new bid to the start of the list
  */
 void LinkedList::Prepend(Bid bid) {
-    // FIXME (3): Implement prepend logic
     // Create new node
     Node* new_bid_node = new Node(bid);
 
@@ -148,7 +143,6 @@ void LinkedList::Prepend(Bid bid) {
  * Simple output of all bids in the list
  */
 void LinkedList::PrintList() {
-    // FIXME (4): Implement print logic
     // start at the head
     Node* currNode = head;
 
@@ -170,7 +164,6 @@ void LinkedList::PrintList() {
  * @param bidId The bid id to remove from the list
  */
 void LinkedList::Remove(string bidId) {
-    // FIXME (5): Implement remove logic
     // special case if matching node is the head
     if (head->bid.bidId == bidId) {
         // make head point to the next node in the list
