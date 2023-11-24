@@ -1,9 +1,6 @@
 //============================================================================
 // Name        : HashTable.cpp
 // Author      : Justin M Taylor
-// Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
-// Description : Hello World in C++, Ansi-style
 //============================================================================
 
 #include <algorithm>
@@ -92,7 +89,6 @@ public:
  * Default constructor
  */
 HashTable::HashTable() {
-    // FIXME (1): Initialize the structures used to hold bids
     // Initalize node structure by resizing tableSize
     nodes.resize(tableSize);
 }
@@ -114,7 +110,6 @@ HashTable::HashTable(unsigned int size) {
  * Destructor
  */
 HashTable::~HashTable() {
-    // FIXME (2): Implement logic to free storage when class is destroyed
     // erase nodes beginning
     nodes.erase(nodes.begin());
 }
@@ -129,7 +124,6 @@ HashTable::~HashTable() {
  * @return The calculated hash
  */
 unsigned int HashTable::hash(int key) {
-    // FIXME (3): Implement logic to calculate a hash value
     // return key tableSize
     return key % tableSize;
 }
@@ -140,7 +134,6 @@ unsigned int HashTable::hash(int key) {
  * @param bid The bid to insert
  */
 void HashTable::Insert(Bid bid) {
-    // FIXME (5): Implement logic to insert a bid
     // create the key for the given bid
     unsigned int key = hash(atoi(bid.bidId.c_str()));
     // retrieve node using key
@@ -174,7 +167,6 @@ void HashTable::Insert(Bid bid) {
  * Print all bids
  */
 void HashTable::PrintAll() {
-    // FIXME (6): Implement logic to print all bids
     // for node begin to end iterate
     int i;
     cout << "Key | BidId | Item | Amount | Fund " << endl;
@@ -204,7 +196,6 @@ void HashTable::PrintAll() {
  * @param bidId The bid id to search for
  */
 void HashTable::Remove(string bidId) {
-    // FIXME (7): Implement logic to remove a bid
     // set key equal to hash atoi bidID cstring
     unsigned int key = hash(atoi(bidId.c_str()));
     // erase node begin and key
@@ -218,7 +209,6 @@ void HashTable::Remove(string bidId) {
  */
 Bid HashTable::Search(string bidId) {
     Bid bid;
-    // FIXME (8): Implement logic to search for and return a bid
     // create the key for the given bid
     unsigned int key = hash(atoi(bidId.c_str()));
     Node* node = &(nodes.at(key));
