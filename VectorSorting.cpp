@@ -1,9 +1,6 @@
 //============================================================================
 // Name        : VectorSorting.cpp
 // Author      : Justin M Taylor
-// Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
-// Description : Vector Sorting Algorithms
 //============================================================================
 
 #include <algorithm>
@@ -111,8 +108,6 @@ vector<Bid> loadBids(string csvPath) {
     return bids;
 }
 
-// FIXME (2a): Implement the quick sort logic over bid.title
-
 /**
  * Partition the vector of bids into two parts, low and high
  *
@@ -182,8 +177,6 @@ void quickSort(vector<Bid>& bids, int begin, int end) {
     // recursively sort high partition (mid+1 to end)
     quickSort(bids, mid + 1, end);
 }
-
-// FIXME (1a): Implement the selection sort logic over bid.title
 
 /**
  * Perform a selection sort on bid title
@@ -293,7 +286,6 @@ int main(int argc, char* argv[]) {
 
             break;
 
-        // FIXME (1b): Invoke the selection sort and report timing results
          case 3:
              //ticks = clock();
              selectionSort(bids);
@@ -303,7 +295,6 @@ int main(int argc, char* argv[]) {
              cout << "time: " << ticks << " clock ticks" << endl;
              cout << "time: " << ticks * 1.0 / CLOCKS_PER_SEC << " seconds" << endl;
 
-        // FIXME (2b): Invoke the quick sort and report timing results
          case 4:
              quickSort(bids, 0, bids.size() - 1);
 
